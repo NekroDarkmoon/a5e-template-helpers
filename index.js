@@ -4,6 +4,7 @@
 import { moduleName, moduleTag } from './scripts/constants.js';
 import { TemplatePlacer } from './scripts/generateTemplate.js';
 import { registerSettings } from './scripts/settings.js';
+import { TemplateTargeting } from './scripts/TemplateTargetter.js';
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //                                     Main Hooks
@@ -25,6 +26,7 @@ Hooks.once('ready', async function () {
 	new TemplatePlacer();
 
 	// Template Targeting
+	new TemplateTargeting();
 
 	console.log(`${moduleTag} | Ready.`);
 
